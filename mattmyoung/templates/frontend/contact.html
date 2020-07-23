@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1 class="display-4">Contact Matthew Young</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6 col-sm-2 mx-auto">
+      <form id="contact_form" class="mx-auto" action="{% url 'contact' %}" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="email">Name</label>
+          {{ form.name }}
+        </div>
+        <div class="form-group">
+          <label for="email">Email address</label>
+          {{ form.email }}
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          {{ form.message }}
+        </div>
+        <button class="btn btn-primary w-100 py-2 mt-2 g-recaptcha" type="submit" value="Send">Send</button>
+        {% if form.email.errors %}
+          <p class="alert alert-danger mt-3">{{ form.email.errors.as_text }}</p>
+        {% endif %}
+        {% if success %}
+          <p class="alert alert-success mt-3">{{ success }}</p>
+        {% endif %}
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block footer_js %}
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script>
+    function onSubmit(token) {
+      document.getElementById("contact_form").submit();
+    }
+   </script>
+{% endblock %}

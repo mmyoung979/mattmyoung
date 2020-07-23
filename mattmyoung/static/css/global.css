@@ -1,0 +1,105 @@
+*::selection {background-color: #4e8ca3;}
+html {background-color: #222222;}
+body {
+  width: 100%;
+  color: #222222;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+}
+body, button, input, select, textarea {font-family: "Raleway", sans-serif;}
+a {
+  color: #db1645;
+  pointer-events: all;
+}
+a:hover {
+  text-decoration: none !important;
+  color: #ad1136;
+}
+input {
+  color: #222222;
+  width: 80%;
+  border: 1px solid #222222;
+  padding: 15px !important;
+  border-radius: 4px;
+}
+p {margin-bottom: 0;}
+p, li {font-family: 'Merriweather', serif;}
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.4em;
+  font-family: "Raleway";
+}
+h1 {
+  letter-spacing: 2px;
+  font-size: 60px;
+  font-weight: 800;
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+}
+h2 {font-size: 30px;}
+h3 {margin-top: 30px;}
+form {
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+input[type=text], textarea {color: black !important;}
+input[type=text]:focus, textarea:focus {color: #ad1136 !important;}
+@media (min-width: @screen-xs-min) and (max-width: @screen-md-max) {
+  .tag {font-size: 28px;}
+}
+@media (min-width: @screen-lg-min) {
+  .tag {font-size: 22px;}
+}
+.tags {margin: 0 auto 30px;}
+.highlight {
+  font-family: "Raleway-semibold";
+  color: #db1645;
+}
+#pt {
+  position:relative;
+  height: 100vh !important;
+}
+.top-content {
+  top: 0;
+  left: 0;
+  position: absolute;
+  color: white;
+  pointer-events: none;
+}
+.vertical-align {
+  align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.clear {clear: both;}
+.main-container {
+  min-height: 80vh !important;
+  padding: 0;
+}
+#footer {
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #222222;
+  color: white;
+}
+#footer a {color: #db1645}
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
+}
+.btn-primary {
+  background-color: #db1645;
+  border-color: #db1645;
+  padding: 15px;
+}
+.btn-primary:hover {
+  background-color: #ad1136;
+  border-color: #ad1136;
+}
+.card {margin: 15px auto;}
+.space-30 {height: 30px;}
+.space-60 {height: 60px;}

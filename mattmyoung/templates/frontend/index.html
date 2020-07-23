@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <div class="container-fluid vertical-align p-0">
+    <div id="pt" class="d-flex h-100 w-100"></div>
+    <div class="top-content text-center vertical-align w-100 h-100">
+      <h1 class="display-4"><span class="highlight">Matthew Young</span></h1>
+      <h2 class="display-6">Software Developer</h2>
+      <p class="lead text-center">Austin, TX</p>
+      <a href="{% url 'portfolio' %}" class="btn btn-primary mt-3">View My Work</a>
+    </div>
+    <div class="clear"/>
+  </div>
+  <div class="container">
+  </div>
+  <div class="container">
+    <h3 class="text-center">Primary Tech Stack</h3>
+    <div class="row text-center">
+      <div class="col-lg-3 col-sm-12 mt-5">
+        <img src="{% static 'img/logos/ubuntu-logo.png' %}" width="100px" title="Ubuntu" />
+      </div>
+      <div class="col-lg-3 col-sm-12 mt-5">
+        <img src="{% static 'img/logos/django-logo.png' %}" height="100px" title="Django" />
+      </div>
+      <div class="col-lg-3 col-sm-12 mt-5">
+        <img src="{% static 'img/logos/python-logo.png' %}" height="100px" title="Python" />
+      </div>
+      <div class="col-lg-3 col-sm-12 mt-5">
+        <img src="{% static 'img/logos/react-logo.png' %}" height="100px" title="React" />
+      </div>
+    </div>
+    <div class="row text-center mt-5">
+      <div class="col-lg-3 col-sm-12 mt-5">
+        <img src="{% static 'img/logos/postgresql-logo.png' %}" height="100px" title="PostgreSQL" />
+      </div>
+      <div class="col-lg-3 col-sm-12 mt-5">
+        <img src="{% static 'img/logos/nginx-logo.png' %}" height="100px" title="Nginx" />
+      </div>
+      <div class="col-lg-3 col-sm-12 mt-5">
+        <img src="{% static 'img/logos/gunicorn-logo.png' %}" height="100px" title="Gunicorn" />
+      </div>
+      <div class="col-lg-3 col-sm-12 mt-5">
+        <img src="{% static 'img/logos/gcp-logo.png' %}" height="100px" title="Google Cloud Platform" />
+      </div>
+    </div>
+  </div>
+  <div class="space-60"></div>
+{% endblock %}
+
+{% block footer_js %}
+  <script type="text/javascript" src="{% static 'js/pt.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/canvas.js' %}"></script>
+{% endblock %}

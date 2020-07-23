@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <a class="btn btn-primary mt-5 ml-5" href="../">Back</a>
+        <h1 class="display-4">pts</h1>
+        <h2 class="display-6 text-center">Description</h2>
+        <p class="text-center">Pts is a javascript library for visualization and creative-coding.</p>
+        <p class="text-center">If you hover your mouse over the lines below, you will see them light up.</p>
+        <div class="space-30"></div>
+        <div id="pt"></div>
+        <div class="space-60"></div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block footer_js %}
+  <script type="text/javascript" src="{% static 'js/pt.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/canvas.js' %}"></script>
+{% endblock %}
