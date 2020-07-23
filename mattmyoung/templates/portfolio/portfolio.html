@@ -7,7 +7,7 @@
         <div class="row text-center">
             <div class="col-lg-4 col-sm-1 mb-3">
               <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="{% static 'img/yttags.png' %}" alt="Card image cap">
+                <a href="https://yttags.com/" target="_blank"><img class="card-img-top" src="{% static 'img/yttags.png' %}" alt="Card image cap"></a>
                 <div class="card-body">
                   <h2>YT Tags</h2>
                   <p class="card-text">Data analytics using YouTube's API</p>
@@ -17,7 +17,7 @@
             </div>
             <div class="col-lg-4 col-sm-1 mb-3">
               <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="{% static 'img/pts.png' %}" alt="Card image cap">
+                <a href="{% url 'pts' %}"><img class="card-img-top" src="{% static 'img/pts.png' %}" alt="Card image cap"></a>
                 <div class="card-body">
                   <h2>Pts</h2>
                   <p class="card-text">JavaScript library for visualization</p>
@@ -27,7 +27,7 @@
             </div>
             <div class="col-lg-4 col-sm-1 mb-3">
               <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="{% static 'img/plotly.png' %}" alt="Card image cap">
+                <a href="{% url 'plotly' %}"><img class="card-img-top" src="{% static 'img/plotly.png' %}" alt="Card image cap"></a>
                 <div class="card-body">
                   <h2>Plotly</h2>
                   <p class="card-text">Python library for data analytics</p>

@@ -96,9 +96,9 @@ input[type=text]:focus, textarea:focus {color: #ad1136 !important;}
   border-color: #db1645;
   padding: 15px;
 }
-.btn-primary:hover {
-  background-color: #ad1136;
-  border-color: #ad1136;
+.btn-primary:hover, btn-primary:active {
+  background-color: #ad1136 !important;
+  border-color: #ad1136 !important;
 }
 .card {margin: 15px auto;}
 .space-30 {height: 30px;}

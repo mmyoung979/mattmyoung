@@ -8,7 +8,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-lg-6 col-sm-2 mx-auto">
+    <div class="col-lg-6 col-md-6 col-sm-12 mx-auto">
       <form id="contact_form" class="mx-auto" action="{% url 'contact' %}" method="POST">
         {% csrf_token %}
         <div class="form-group">
@@ -23,7 +23,7 @@
           <label for="message">Message</label>
           {{ form.message }}
         </div>
-        <button class="btn btn-primary w-100 py-2 mt-2 g-recaptcha" type="submit" value="Send">Send</button>
+        <button class="btn btn-primary w-100 py-3 mt-2 g-recaptcha" type="submit" value="Send">Send</button>
         {% if form.email.errors %}
           <p class="alert alert-danger mt-3">{{ form.email.errors.as_text }}</p>
         {% endif %}
