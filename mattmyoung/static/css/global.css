@@ -101,5 +101,16 @@ input[type=text]:focus, textarea:focus {color: #ad1136 !important;}
   border-color: #ad1136 !important;
 }
 .card {margin: 15px auto;}
+ul.tags {
+  list-style: none;
+  font-size: 0.5em;
+  color: #db1645;
+  padding: 0;
+  margin: 0 10% 10px;
+  columns: 3;
+  -webkit-columns: 3;
+  -moz-columns: 3;
+}
+.card-text {height: 3em;}
 .space-30 {height: 30px;}
 .space-60 {height: 60px;}

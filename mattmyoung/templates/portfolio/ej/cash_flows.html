@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}{{ ticker }}{% endblock %}
+
+{% block content %}
+<style>
+  table {
+    border: 2px solid #acf;
+    border-collapse: separate;
+    margin: 30px 15px;
+  }
+  th, td {padding: 10px;}
+  td {text-align: left !important;}
+  td a {color: black;}
+  td a:hover {color: black;}
+  th {
+    background-color: #acf;
+    text-align: center;
+  }
+  th div {width: 100% !important;}
+  tr:nth-of-type(odd) {background-color: #def;}
+</style>
+
+<div class="container">
+  <div class="row text-center my-5">
+    <div class="col">
+      <h1>{{ ticker }}</h1>
+      <p>Last pulled on {{ time }}</p>
+      <a class="btn btn-primary mt-3 mb-5" href="{% url 'ej_list_view' %}">Back to List View</a>
+    </div>
+    <table id="report">
+      {{ report|safe }}
+    </table>
+  </div>
+</div>
+{% endblock %}

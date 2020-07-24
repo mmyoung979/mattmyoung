@@ -16,6 +16,8 @@ INSTALLED_APPS = [
     # Local apps
     'mattmyoung.frontend',
     'mattmyoung.portfolio',
+    'mattmyoung.zerocater',
+    'mattmyoung.egan_jones',
 
     # 3rd party apps
     'rest_framework',
@@ -37,9 +39,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            'mattmyoung/templates',
-        ],
+        'DIRS': [os.path.join(BASE_DIR, 'mattmyoung/templates/')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -76,7 +76,7 @@ LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'America/New_York'
 USE_I18N = True
 USE_L10N = True
-USE_TZ = True
+USE_TZ = False
 
 # STATIC FILES
 STATIC_URL = '/static/'

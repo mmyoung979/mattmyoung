@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col text-center">
+        <h1>Consolidated Cash Flows Tool</h1>
+        <p>By Matthew Young</p>
+      </div>
+    </div>
+    <div class="row mt-5 pb-3">
+      <div class="col-lg-4 offset-lg-4 col-sm-12 offset-sm-3">
+        <form class="form-inline my-2 my-lg-0 center-div" method="POST" action="{% url 'ej_cash_flows' %}">
+          {% csrf_token %}
+          {{ form }}
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+    <div class="row mt-5 mb-5">
+      <div class="col">
+        <h2 class="text-center mb-5">What Does It Do?</h2>
+        <p class="text-center">This tool directly pulls the Consolidated Statements of Cash Flows from a company's 10-K form.</p>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col">
+        <h2 class="text-center mb-5">How Does It Work?</h2>
+        <p class="text-center">
+          If the company has already been looked up on here, it will load immediately.<br>
+          If not, it will take roughly 10 seconds to load, and then it will load immediately the next time.</p>
+      </div>
+    </div>
+  </div>
+  <div class="space-60"></div>
+{% endblock %}

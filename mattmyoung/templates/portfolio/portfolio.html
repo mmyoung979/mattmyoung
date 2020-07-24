@@ -2,39 +2,101 @@
 {% load static %}
 
 {% block content %}
-    <h1 class="display-4 mb-5">Portfolio</h1>
-    <div class="container">
-        <div class="row text-center">
-            <div class="col-lg-4 col-sm-1 mb-3">
-              <div class="card" style="width: 18rem;">
-                <a href="https://yttags.com/" target="_blank"><img class="card-img-top" src="{% static 'img/yttags.png' %}" alt="Card image cap"></a>
-                <div class="card-body">
-                  <h2>YT Tags</h2>
-                  <p class="card-text">Data analytics using YouTube's API</p>
-                  <a class="btn btn-primary mt-3" href="https://yttags.com/" target="_blank">View Site</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-1 mb-3">
-              <div class="card" style="width: 18rem;">
-                <a href="{% url 'pts' %}"><img class="card-img-top" src="{% static 'img/pts.png' %}" alt="Card image cap"></a>
-                <div class="card-body">
-                  <h2>Pts</h2>
-                  <p class="card-text">JavaScript library for visualization</p>
-                  <a class="btn btn-primary mt-3" href="{% url 'pts' %}">View Example</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-1 mb-3">
-              <div class="card" style="width: 18rem;">
-                <a href="{% url 'plotly' %}"><img class="card-img-top" src="{% static 'img/plotly.png' %}" alt="Card image cap"></a>
-                <div class="card-body">
-                  <h2>Plotly</h2>
-                  <p class="card-text">Python library for data analytics</p>
-                  <a class="btn btn-primary mt-3" href="{% url 'plotly' %}">View Example</a>
-                </div>
-              </div>
-            </div>
+  <h1 class="display-4 mb-5">Portfolio</h1>
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-lg-4 col-sm-12 mb-3">
+        <div class="card">
+          <a href="https://yttags.com/" target="_blank"><img class="card-img-top" src="{% static 'img/yttags.png' %}" alt="Card image cap"></a>
+          <div class="card-body">
+            <h2>YT Tags</h2>
+            <ul class="tags">
+              <li>#Python</li>
+              <li>#Django</li>
+              <li>#API</li>
+            </ul>
+            <p class="card-text">Data analytics using YouTube's API</p>
+            <a class="btn btn-primary mt-3" href="https://yttags.com/" target="_blank">View Site</a>
+          </div>
         </div>
+      </div>
+      <div class="col-lg-4 col-sm-12 mb-3">
+        <div class="card">
+          <a href="https://iapetusconsulting.co/" target="_blank"><img class="card-img-top" src="{% static 'img/iapetus.png' %}" alt="Card image cap"></a>
+          <div class="card-body">
+            <h2>Iapetus</h2>
+            <ul class="tags">
+              <li>#Python</li>
+              <li>#Django</li>
+              <li>#PostgreSQL</li>
+            </ul>
+            <p class="card-text">Financial sentiment analysis software</p>
+            <a class="btn btn-primary mt-3" href="https://iapetusconsulting.co/" target="_blank">View Site</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-12 mb-3">
+        <div class="card">
+          <a href="{% url 'pts' %}"><img class="card-img-top" src="{% static 'img/pts.png' %}" alt="Card image cap"></a>
+          <div class="card-body">
+            <h2>Pts</h2>
+            <ul class="tags">
+              <li>#JavaScript</li>
+              <li>#Pts</li>
+              <li>#Design</li>
+            </ul>
+            <p class="card-text">JavaScript library for visualization</p>
+            <a class="btn btn-primary mt-3" href="{% url 'pts' %}">View Example</a>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="row text-center">
+      <div class="col-lg-4 col-sm-12 mb-3">
+        <div class="card">
+          <a href="{% url 'plotly' %}"><img class="card-img-top" src="{% static 'img/plotly.png' %}" alt="Card image cap"></a>
+          <div class="card-body">
+            <h2>Plotly</h2>
+            <ul class="tags">
+              <li>#Plotly</li>
+              <li>#Python</li>
+              <li>#Django</li>
+            </ul>
+            <p class="card-text">Python library for data analytics</p>
+            <a class="btn btn-primary mt-3" href="{% url 'plotly' %}">View Example</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-12 mb-3">
+        <div class="card">
+          <a href="{% url 'zerocater' %}"><img class="card-img-top" src="{% static 'img/zerocater.png' %}" alt="Card image cap"></a>
+          <div class="card-body">
+            <h2>ZeroCater</h2>
+            <ul class="tags">
+              <li>#Python</li>
+              <li>#JSON</li>
+              <li>#Challenge</li>
+            </ul>
+            <p class="card-text">Code submission for ZeroCater</p>
+            <a class="btn btn-primary mt-3" href="{% url 'zerocater' %}">View Submission</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-12 mb-3">
+        <div class="card">
+          <a href="{% url 'ej' %}"><img class="card-img-top" src="{% static 'img/ej.png' %}" alt="Card image cap"></a>
+          <div class="card-body">
+            <h2>Egan-Jones</h2>
+            <ul class="tags">
+              <li>#Selenium</li>
+              <li>#Python</li>
+              <li>#Django</li>
+            </ul>
+            <p class="card-text">Code submission for Egan-Jones</p>
+            <a class="btn btn-primary mt-3" href="{% url 'ej' %}">View Submission</a>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 {% endblock %}

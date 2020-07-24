@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}List View{% endblock %}
+
+{% block content %}
+  <style>
+    table {
+      border: 2px solid #acf;
+      border-collapse: separate;
+      margin: 30px 15px;
+    }
+    th, td {padding: 10px;}
+    td {text-align: left !important;}
+    th {
+      background-color: #acf;
+      text-align: center;
+    }
+    th div {width: 100% !important;}
+    tr:nth-of-type(odd) {background-color: #def;}
+  </style>
+
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col text-center">
+        <h1>List View</h1>
+        <p>
+          A list of tickers for companies whose Consolidated Statements of Cash Flows have already been saved.<br>
+          If you search a new ticker, it will take roughly 10 seconds to load and save for future use.
+        </p>
+      </div>
+    </div>
+
+    <div class="row mt-5 pb-3">
+      <div class="col-lg-4 offset-lg-4 col-sm-12 offset-sm-3">
+        <form class="form-inline my-2 my-lg-0" method="POST" action="{% url 'ej_cash_flows' %}">
+          {% csrf_token %}
+          {{ form }}
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+
+    {% if list %}
+    <div class="row">
+      <table class="col center-div mt-5 px-0">
+        <thead>
+          <th>Ticker</th>
+        </thead>
+        <tbody>
+          {% for obj in list %}
+            <tr>
+              <td class="text-center"><a href="{% url 'ej_detail_view' obj.ticker %}">{{ obj.ticker }}</a></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% endif %}
+  </div>
+{% endblock %}
