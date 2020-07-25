@@ -28,7 +28,7 @@
       <p>Last pulled on {{ time }}</p>
       <a class="btn btn-primary mt-3 mb-5" href="{% url 'ej_list_view' %}">Back to List View</a>
     </div>
-    <table id="report">
+    <table id="report" class="table-responsive">
       {{ report|safe }}
     </table>
   </div>
