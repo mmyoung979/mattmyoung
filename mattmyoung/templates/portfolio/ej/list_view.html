@@ -15,7 +15,6 @@
       background-color: #acf;
       text-align: center;
     }
-    th div {width: 100% !important;}
     tr:nth-of-type(odd) {background-color: #def;}
   </style>
 
@@ -42,18 +41,20 @@
 
     {% if list %}
     <div class="row">
-      <table class="col center-div mt-5 px-0">
-        <thead>
-          <th>Ticker</th>
-        </thead>
-        <tbody>
-          {% for obj in list %}
-            <tr>
-              <td class="text-center"><a href="{% url 'ej_detail_view' obj.ticker %}">{{ obj.ticker }}</a></td>
-            </tr>
-          {% endfor %}
-        </tbody>
-      </table>
+      <div class="col mt-5 table-responsive">
+        <table class="table mx-auto">
+          <thead>
+            <th>Ticker</th>
+          </thead>
+          <tbody>
+            {% for obj in list %}
+              <tr>
+                <td class="text-center"><a href="{% url 'ej_detail_view' obj.ticker %}">{{ obj.ticker }}</a></td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
     </div>
     {% endif %}
   </div>
